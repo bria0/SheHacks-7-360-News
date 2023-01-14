@@ -17,6 +17,7 @@ const Header = () => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-top: 72px;
 `
 const  Text = styled.div`
   display: flex;
@@ -44,7 +45,9 @@ const  Text2 = styled.p`
 const  Border = styled.div`
   height: 2px;
   width: 622px;
-  background-color: #5cceff;`
+  background-color: #5cceff;
+  margin-bottom: 32px;
+  `
   
   export default Header;
   

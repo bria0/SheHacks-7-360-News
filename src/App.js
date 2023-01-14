@@ -9,6 +9,7 @@ function App() {
       <header className="App-header">
       <Header />
       <SearchInput />
+      <p>Trending in the last 24 hours</p>
       </header>
     </div>
   );
