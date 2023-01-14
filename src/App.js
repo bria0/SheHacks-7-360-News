@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header.js'
 import SearchInput from './components/searchbar.js'
+import List from './components/trendingList.js'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <SearchInput />
       <p>Trending in the last 24 hours</p>
+      <List />
       </header>
     </div>
   );
