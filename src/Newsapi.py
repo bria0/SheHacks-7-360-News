@@ -38,7 +38,7 @@ param: none
 return: prompt that user enters
 """
 def get_news(topic):
-    newsapi = NewsApiClient(api_key='36b75911cfce4a27952c6b48f09d4a8f')  # getting news api
+    newsapi = NewsApiClient(api_key='2245ae73422e4cfa9189e01a2e31e391')  # getting news api
     topic = topic
     content_list = []
     categories = ['left', 'centre', 'right']
@@ -74,6 +74,7 @@ return: A list of summarized articles and its reference information
 """
 def summarize(news):
     count =0
+    dictionary = {}
     for article in news:
         # Uses Cohere text summarization to reduce the article into 100 words
         prompt="Please summarize the passage in 100 words: "+article[1].replace('\n', ' ')
@@ -84,9 +85,16 @@ def summarize(news):
        )
         article_summarized = response.generations[0].text
         #changes article content in the original dictionary to the summarized article
-        news[count][1]=article_summarized
+        title_name = "title"+str(count)
+        article_name="article"+str(count)
+        url_name = "url"+str(count)
+        timestamp_name = "url"+str(count)
+        dictionary[title_name] = news[count][0]
+        dictionary[article_name]=news[count][1]
+        dictionary[url_name]=news[count][2]
+        dictionary[timestamp_name]=news[count][3]
         count=count+1
-    return news
+    return dictionary
 
 
 if __name__ == '__main__':
