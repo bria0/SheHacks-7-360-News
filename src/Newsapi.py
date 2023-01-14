@@ -88,7 +88,7 @@ def summarize(news):
         title_name = "title"+str(count)
         article_name="article"+str(count)
         url_name = "url"+str(count)
-        timestamp_name = "url"+str(count)
+        timestamp_name = "timestamp"+str(count)
         dictionary[title_name] = news[count][0]
         dictionary[article_name]=news[count][1]
         dictionary[url_name]=news[count][2]
