@@ -4,7 +4,7 @@ const Header = () => {
     return (
       <Header1>
       <Text>
-        <Text1>The Whole Story</Text1>
+        <Text1>All Sides News</Text1>
         <Text2>FAQ</Text2>
       </Text>
       <Border />
@@ -17,7 +17,6 @@ const Header = () => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 24px;
 `
 const  Text = styled.div`
   display: flex;
