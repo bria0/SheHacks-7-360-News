@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import { useEffect } from 'react';
+import search from 
 
 const SearchInput = () => {
     const [searchValue, setSearchValue] = useState("");
+    const inputRef = useRef(null);
 
+    useEffect(() => {
+        const searchbar = inputRef.current;
+        searchbar.addEventListener("click", function() {
+            console.log("Searchbar clicked");
+        });
+    }, [])
+    
     const handleSearchInputChanges = (e) => {
         setSearchValue(e.target.value);
     }
@@ -12,7 +22,7 @@ const SearchInput = () => {
         setSearchValue("")
     }
 
-    const search = (e) => {
+    const callSearch = (e) => {
         e.preventDefault();
         search(searchValue);
         resetInputField();
@@ -68,11 +78,12 @@ const SearchInput = () => {
                     value={searchValue} 
                     onChange={handleSearchInputChanges} 
                     placeholder="Search"
+                    ref={inputRef}
                 />
                 <Submit 
                     type="submit" 
                     value="SEARCH" 
-                    onClick={search} 
+                    onClick={callSearch} 
                 />
         </Form>
     );
