@@ -38,7 +38,7 @@ param: none
 return: prompt that user enters
 """
 def get_news(topic):
-    newsapi = NewsApiClient(api_key='0578fa4eb8f448f1b10a0701f37aae58')  # getting news api
+    newsapi = NewsApiClient(api_key='36b75911cfce4a27952c6b48f09d4a8f')  # getting news api
     topic = topic
     content_list = []
     categories = ['left', 'centre', 'right']
