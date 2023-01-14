@@ -12,6 +12,12 @@ const SearchInput = () => {
         searchbar.addEventListener("click", function() {
             console.log("Searchbar clicked");
         });
+        searchbar.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+            console.log("Enter pressed in searchbar");
+            callSearch(event);
+            }
+        });
     }, [])
     
     const handleSearchInputChanges = (e) => {
