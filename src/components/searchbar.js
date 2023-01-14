@@ -1,11 +1,19 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useEffect } from 'react';
-import get_summary from './src/Newsapi.py ';
+import axios from 'axios'
+//import get_summary from './src/Newsapi.py ';
 
-const SearchInput = () => {
+const SearchInput = ({setSummary}) => {
     const [searchValue, setSearchValue] = useState("");
     const inputRef = useRef(null);
+
+    async function request(){
+        let payload = {text: searchValue}
+        let res = await axios.post('/summary', payload)
+        setSummary(res.data)
+        console.log(res.data)
+    }
 
     useEffect(() => {
         const searchbar = inputRef.current;
@@ -30,8 +38,10 @@ const SearchInput = () => {
 
     const callSearch = (e) => {
         e.preventDefault();
-        get_summary(searchValue);
+        //get_summary(searchValue);
+        request()
         resetInputField();
+        
     }
 
     const Form = styled.form`
