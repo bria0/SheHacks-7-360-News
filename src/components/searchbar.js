@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useEffect } from 'react';
-import get_summary from Newsapi.py 
+import get_summary from './src/Newsapi.py ';
 
 const SearchInput = () => {
     const [searchValue, setSearchValue] = useState("");
