@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background: transparent; 
+}
+
+#parent {
+  background-color: #f2f2f2; 
 }
 
 .App-logo {
@@ -14,13 +19,28 @@
 }
 
 .App-header {
-  background: #F2F2F2; 
+  background: transparent; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+.circle-bg {
+  width: 72vmin; /* 100% of the viewport's minimum dimension */
+  height: 72vmin;
+  border-radius: 50%; /* creates a circle */
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color:white; 
+  filter: blur(16px);
+  margin-top: -80px; 
+  margin-bottom: -640px; 
+  z-index: -1; 
 }
 
 .App-link {
