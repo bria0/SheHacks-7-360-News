@@ -2,7 +2,7 @@
 
 See current events from a 360° view.
 
-![image](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/344/873/datas/original.png)
+![Home page image](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/344/873/datas/original.png)
 
 ## Inspiration
 
