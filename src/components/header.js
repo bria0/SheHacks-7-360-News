@@ -4,8 +4,8 @@ const Header = () => {
     return (
       <Header1>
       <Text>
-        <Text1>All Sides News</Text1>
-        <Text2>FAQ</Text2>
+        <Text1>360° News</Text1>
+        <Text1>FAQ</Text1>
       </Text>
       <Border />
     </Header1>
@@ -29,15 +29,7 @@ const  Text = styled.div`
 const  Text1 = styled.p`
   text-align: left;
   vertical-align: middle;
-  font-size: 20px;
-  font-family: Spline Sans;
-  line-height: 150%;
-  color: #000000;
-`
-const  Text2 = styled.p`
-  text-align: left;
-  vertical-align: middle;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Spline Sans;
   line-height: 150%;
   color: #000000;
@@ -50,4 +42,3 @@ const  Border = styled.div`
   `
   
   export default Header;
-  

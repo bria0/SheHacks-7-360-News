@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from './components/header.js'
 import SearchInput from './components/searchbar.js'
 import List from './components/trendingList.js'
+import Card from './components/card';
 
 function App() {
   const [summary, setSummary] = useState()
@@ -12,8 +13,8 @@ function App() {
       <header className="App-header">
       <Header />
       <SearchInput setSummary={setSummary}/>
-      <p>Trending in the last 24 hours</p>
       <List />
+      <Card />
       </header>
       {/* <Summary summary={summary}/> */}
       {summary && summary}
