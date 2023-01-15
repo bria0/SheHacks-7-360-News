@@ -96,7 +96,7 @@ const SearchInput = ({setSummary}) => {
     return (
         <Form>
             <Label>
-                What's going on</Label>
+                What's going on with</Label>
                 <Input 
                     type="text" 
                     // value={searchValue} 

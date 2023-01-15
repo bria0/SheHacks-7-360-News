@@ -1,20 +1,19 @@
 import './App.css';
-import { useState } from 'react';
 import Header from './components/header.js'
 import SearchInput from './components/searchbar.js'
 import List from './components/trendingList.js'
-import Card from './components/card';
+import Card from './components/card.js'
 
 function App() {
-  const [summary, setSummary] = useState()
   return (
+    
     <div className="App">
-       
+      <div className="circle-bg"></div>
       <header className="App-header">
-      <Header />
-      <SearchInput setSummary={setSummary}/>
-      <List />
-      <Card summary={summary}/>
+        <Header />
+        <SearchInput />
+        <List />
+        <Card />
       </header>
     </div>
   );
