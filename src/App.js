@@ -3,6 +3,7 @@ import Header from './components/header.js'
 import SearchInput from './components/searchbar.js'
 import List from './components/trendingList.js'
 import Card from './components/card.js'
+import Faq from './components/faq.js'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <SearchInput />
         <List />
         <Card />
+        <Faq />
       </header>
     </div>
   );
