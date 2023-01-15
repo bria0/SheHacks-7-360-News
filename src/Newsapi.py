@@ -2,7 +2,7 @@ from newsapi import NewsApiClient
 from random import choice
 import cohere
 
-co = cohere.Client("aPZpyPjJZqmDPFZXosv6xPZvVxipmCb6piLBg2gF") #Set up cohere API connection
+co = cohere.Client("JjQQ4ogJuRcjcqYZmDI1aqm2YY7KwtK2wd20VxpT") #Set up cohere API connection
 """
 param: none
 returns: list of selected news sites that articles will be pulled from in the order from left, centre and right
@@ -38,8 +38,8 @@ param: none
 return: prompt that user enters
 """
 def get_news(topic):
-    newsapi = NewsApiClient(api_key='2245ae73422e4cfa9189e01a2e31e391')  # getting news api
-    topic = topic
+    newsapi = NewsApiClient(api_key='b770d19e9ad745e88f737a89b2af70f4')  # getting news api
+    
     content_list = []
     categories = ['left', 'centre', 'right']
 

@@ -10,7 +10,10 @@ const SearchInput = ({setSummary}) => {
     async function request(){
         console.log('started')
         let payload = {text: inputRef.current.value}
+        console.log("about to run the post request")
+
         let res = await axios.post('/summary', payload)
+        console.log("post request done")
         setSummary(res.data)
         console.log(res.data)
     }

@@ -13,8 +13,8 @@ function App() {
       <header className="App-header">
       <Header />
       <SearchInput setSummary={setSummary}/>
-      <List />
       <Card summary={summary}/>
+      <List />
       </header>
     </div>
   );
