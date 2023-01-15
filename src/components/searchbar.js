@@ -69,21 +69,28 @@ const SearchInput = ({setSummary}) => {
         `;
 
     const Submit = styled.input`
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: end; 
+        max-width: fit-content; 
+        padding: 8px 16px;
+        gap: 8px;
+        background-color: #ffffff;
+        color: black;
         border: none;
-        border-radius: 4px;
         cursor: pointer;
-        font-size: 1em;
+        font-size: 15px;
+        font-family: 'Source Code Pro'; 
+        &:hover{
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 9px 28px rgba(0, 0, 0, 0.05), 0px 12px 48px rgba(0, 0, 0, 0.03);
+        }
     `;
 
-
-
-
-
-
+    const RightDiv = styled.div`
+        display: flex;
+        justify-content: flex-end;
+    `;
 
 
     return (
@@ -98,12 +105,12 @@ const SearchInput = ({setSummary}) => {
                     // }} 
                     placeholder="Search"
                     ref={inputRef}
-                />
+                /><RightDiv>
                 <Submit 
                     type="submit" 
-                    value="SEARCH" 
+                    value="ENTER" 
                     onClick={callSearch} 
-                />
+                /></RightDiv>
         </Form>
     );
 }
