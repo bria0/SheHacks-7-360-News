@@ -13,8 +13,9 @@ def summarize():
     # data = request.get_json()
     text = request.get_json()['text']
 
-    # summary = Newsapi.get_summary('tesla')
-    return text
+    summary = Newsapi.get_summary(text)
+
+    return summary
 
 # @app.route('/summary', methods=['POST'])
 # def get_summary():

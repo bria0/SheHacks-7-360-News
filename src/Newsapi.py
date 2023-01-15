@@ -83,17 +83,16 @@ def summarize(news):
         prompt=prompt,
         max_tokens=350,
        )
+        artDictionary = {}
         article_summarized = response.generations[0].text
         #changes article content in the original dictionary to the summarized article
-        title_name = "title"+str(count)
-        article_name="article"+str(count)
-        url_name = "url"+str(count)
-        timestamp_name = "timestamp"+str(count)
-        dictionary[title_name] = news[count][0]
-        dictionary[article_name]=news[count][1]
-        dictionary[url_name]=news[count][2]
-        dictionary[timestamp_name]=news[count][3]
-        count=count+1
+        artDictionary["title"] = news[count][0]
+        artDictionary["article"]=article_summarized
+        artDictionary["url"]=news[count][2]
+        artDictionary["timestamp"]=news[count][3]
+        dictionary[count] = artDictionary
+        count+=1
+
     return dictionary
 
 

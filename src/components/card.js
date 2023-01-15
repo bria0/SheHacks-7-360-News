@@ -1,34 +1,58 @@
 import styled from 'styled-components';
 
-const Card = () => {
-    return (
-    <List1>
-      <Card1>
-        <Heading>
-          <Text1>01/16/2023 at 11:00am PST</Text1>
-          <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
-        </Heading>
-        <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
-        <Text4>Source: [Centre]</Text4>
-      </Card1>
-      <Card1>
-        <Heading>
-          <Text1>01/16/2023 at 11:00am PST</Text1>
-          <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
-        </Heading>
-        <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
-        <Text4>Source: [Centre]</Text4>
-      </Card1>
-      <Card1>
-        <Heading>
-          <Text1>01/16/2023 at 11:00am PST</Text1>
-          <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
-        </Heading>
-        <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
-        <Text4>Source: [Centre]</Text4>
-      </Card1>
-      </List1>
-    )
+const Card = ({summary}) => {
+    console.log(summary)
+    if (summary) {
+        var array = []
+        for (let key in summary){
+            array.push(summary[key])
+        }
+        console.log(array)
+        return array.map((card) => {
+            return (
+                <Card1>
+                    <Heading>
+                    <Text1>{card.timestamp}</Text1>
+                    <Text2>{card.title}</Text2>
+                    </Heading>
+                    <Text3>{card.article}</Text3>
+                    <Text4>Source: {card.url}</Text4>
+                </Card1>
+            )
+        })
+    } 
+    else {
+        return null
+    }
+    // return 
+    // return (
+    // <List1>
+    //   <Card1>
+    //     <Heading>
+    //       <Text1>01/16/2023 at 11:00am PST</Text1>
+    //       <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
+    //     </Heading>
+    //     <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
+    //     <Text4>Source: [Centre]</Text4>
+    //   </Card1>
+    //   <Card1>
+    //     <Heading>
+    //       <Text1>01/16/2023 at 11:00am PST</Text1>
+    //       <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
+    //     </Heading>
+    //     <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
+    //     <Text4>Source: [Centre]</Text4>
+    //   </Card1>
+    //   <Card1>
+    //     <Heading>
+    //       <Text1>01/16/2023 at 11:00am PST</Text1>
+    //       <Text2>Biden's German Shepherd Major: The First Rescue Dog in the White House</Text2>
+    //     </Heading>
+    //     <Text3>President Joe Biden has added a new member to the White House family - a German shepherd named Major. Major was adopted from the Delaware Humane Association and is the first rescue dog to live in the White House. The adoption of Major has brought attention to animal welfare and the importance of adopting rescue animals. Major is already a beloved member of the Biden family and has brought joy to the White House.</Text3>
+    //     <Text4>Source: [Centre]</Text4>
+    //   </Card1>
+    //   </List1>
+    // )
   }
 
   const List1 = styled.div`

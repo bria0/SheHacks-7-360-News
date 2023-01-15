@@ -14,10 +14,8 @@ function App() {
       <Header />
       <SearchInput setSummary={setSummary}/>
       <List />
-      <Card />
+      <Card summary={summary}/>
       </header>
-      {/* <Summary summary={summary}/> */}
-      {summary && summary}
     </div>
   );
 }

@@ -8,39 +8,33 @@ const SearchInput = ({setSummary}) => {
     const inputRef = useRef(null);
 
     async function request(){
-        let payload = {text: searchValue}
+        console.log('started')
+        let payload = {text: inputRef.current.value}
         let res = await axios.post('/summary', payload)
         setSummary(res.data)
         console.log(res.data)
     }
 
-    useEffect(() => {
-        const searchbar = inputRef.current;
-        searchbar.addEventListener("click", function() {
-            console.log("Searchbar clicked");
-        });
-        searchbar.addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-            console.log("Enter pressed in searchbar");
-            callSearch(event);
-            }
-        });
-    }, [])
-    
-    const handleSearchInputChanges = (e) => {
-        setSearchValue(e.target.value);
-    }
+    // useEffect(() => {
+    //     const searchbar = inputRef.current;
+    //     searchbar.addEventListener("click", function() {
+    //         console.log("Searchbar clicked");
+    //     });
+    //     searchbar.addEventListener("keypress", function(event) {
+    //         if (event.key === "Enter") {
+    //         console.log("Enter pressed in searchbar");
+    //         callSearch();
+    //         }
+    //     });
+    // }, [])
 
-    const resetInputField = () => {
-        setSearchValue("")
-    }
+    // const handleSearchInputChanges = (e) => {
+    //     setSearchValue(e.target.value);
+    // }
 
     const callSearch = (e) => {
-        //e.preventDefault();
-        //get_summary(searchValue);
+        e.preventDefault();
         request()
-        //resetInputField();
-        
     }
 
     const Form = styled.form`
@@ -98,8 +92,10 @@ const SearchInput = ({setSummary}) => {
                 What's going on</Label>
                 <Input 
                     type="text" 
-                    value={searchValue} 
-                    onChange={handleSearchInputChanges} 
+                    // value={searchValue} 
+                    // onChange={(e)=>{
+                    //     setSearchValue(e.target.value)
+                    // }} 
                     placeholder="Search"
                     ref={inputRef}
                 />
