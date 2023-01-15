@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# 360° News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See current events from a 360° view.
 
-## Available Scripts
+!(https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/344/873/datas/original.png)
 
-In the project directory, you can run:
+## Inspiration
 
-### `npm start`
+The current landscape of digital news and social media has both lowered attention spans and created echo chambers that limit our exposure to different views, further reinforcing existing biases.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Current text summarizers in the market are generally not geared towards news and do not place focus on expressing a wide range of angles. By providing small but informative paragraphs, our goal is to broaden perspectives on global events in an accessible manner for today's population.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What it does
 
-### `npm test`
+- You enter key words or explore a trending topic
+- We summarize 3 relevant articles from centre, left leaning, and right leaning sources, that have been posted in a similar time frame
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How we built it
 
-### `npm run build`
+- We use News API to collect matching news articles that fit key words from a range of politically diverse news sources
+- We use Cohere API to generate summaries of long articles into less than 100 words
+- Backend was built in Python and connected to our React frontend using Flask
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What's next
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Date range selection
+- More customization of news sources, such as filtering, browsing by categories, and setting a display amount
+- Email newsletter
+- Mobile app
+- Podcast
+- Improved performance
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to run
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start`
+- `npm install --save styled-components`
+- `npm install axios`
+- `pip install cohere`
+- `pip install newsapi-python`
+- `python -m flask run`
