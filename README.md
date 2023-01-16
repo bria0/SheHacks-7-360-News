@@ -38,3 +38,6 @@ Current text summarizers in the market are generally not geared towards news and
 - `pip install cohere`
 - `pip install newsapi-python`
 - `python -m flask run`
+
+## Demo
+Check out our [YouTube video](https://youtu.be/9cZW91pytRc) to see 360 News in action 
